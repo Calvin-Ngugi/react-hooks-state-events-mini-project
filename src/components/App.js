@@ -23,7 +23,7 @@ function App() {
       <h2>My tasks</h2>
       <CategoryFilter categories={CATEGORIES} selectedCategory={category} selectingCategory={setCategory}/>
       <NewTaskForm categories={CATEGORIES.filter((newCat) => newCat !== "All")} onTaskFormSubmit={handleAddTask}/>
-      <TaskList tasks={seenTasks} deleleteTask={handleDeleteTask}/>
+      <TaskList tasks={seenTasks} deleteTask={handleDeleteTask}/>
     </div>
   );
 }

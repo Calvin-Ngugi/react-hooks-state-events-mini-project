@@ -2,13 +2,13 @@ import React, {useState} from "react";
 
 function NewTaskForm({categories, onTaskFormSubmit}) {
   const [text, setText] = useState("");
-  const [category, setCategory] = useState("Code");
+  const [category, setCategory] = useState("code");
 
   function handleSubmit(e){
     e.preventDefault();
     onTaskFormSubmit({text, category});
     setText("");
-    setCategory("Code");
+    setCategory("code")
   }
 
   return (
@@ -20,8 +20,8 @@ function NewTaskForm({categories, onTaskFormSubmit}) {
       <label>
         Category
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        {categories.map((cat) => (
-            <option key={cat}>{cat}</option>
+        {categories.map((newCat) => (
+            <option key={newCat}>{newCat}</option>
           ))}
         </select>
       </label>

@@ -5,7 +5,7 @@ function TaskList({tasks, deleteTask}) {
   const displayTask = tasks.map((task) =>(
     <Task
     key={task.text}
-    name={task.text}
+    text={task.text}
     category={task.category}
     deleteTask={deleteTask}
     />
